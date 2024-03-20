@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
+import { AgentModule } from './agent/agent.module';
+import { MerchantModule } from './merchant/merchant.module';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
   imports: [
@@ -17,6 +20,9 @@ import { UserModule } from './user/user.module';
       }),
     }),
     UserModule,
+    AgentModule,
+    MerchantModule,
+    CustomerModule,
   ],
   controllers: [],
   providers: [],

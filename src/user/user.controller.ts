@@ -14,8 +14,8 @@ export class UserController {
   }
 
   @Get()
-  findAll(@Query() query:ExpressQuery) {
-    return this.userService.findAll(query);
+  findAll() {
+    return this.userService.findAll();
   }
 
   @Get(':id')
